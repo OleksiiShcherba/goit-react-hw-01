@@ -1,0 +1,48 @@
+.profile {
+    min-width: 500px;
+    background-color: #fafafa;
+    color: #000000;
+    border: 1px solid #212121;
+    border-radius: 2%;
+    padding-top: 20px;
+}
+
+.profileBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileIcon {
+    width: 250px;
+    background-color: #2a2a2a;
+    border-radius: 50%;
+}
+
+.boldName {
+    font-weight: 700;
+    font-size: xx-large;
+    margin-bottom: 5px;
+}
+
+.userDetails {
+    font-size: x-large;
+    color: #808080;
+    margin-bottom: 10px;
+}
+
+.stat{
+    display: flex;
+    justify-content:space-around;
+    padding: 20px 0px;
+    border-top: 2px solid #808080;
+    background-color: #d3d3d3;
+    overflow: hidden;
+}
+
+.statElement{
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    width: 100%;
+}

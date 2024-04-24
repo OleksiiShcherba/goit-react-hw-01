@@ -1,3 +1,4 @@
+import css from "./Profile.module.css";
 import PropTypes from 'prop-types';
 
 function firstLetterToUpperCase(word) {
@@ -16,24 +17,27 @@ function firstLetterToUpperCase(word) {
 const Profile = ({ name, tag, location, image, stats }) => {
     const list = [];
     for (let key in stats) {
-        list.push(<li key={key}>
-                <span>{firstLetterToUpperCase(key)}</span>
+        list.push(<li className={css.statElement} key={key}>
+            <span className={css.bold}>{firstLetterToUpperCase(key)}</span>
                 <span>{stats[key]}</span>
             </li>);
     }
 
 
-    return <div>
-        <div>
+    return <div className={css.profile}>
+        <div className={css.profileBlock}>
             <img
+                className={css.profileIcon}
                 src={image}
                 alt={name}
             />
-            <p>{name}</p>
-            <p>{tag}</p>
-            <p>{location}</p>
+            <p className={css.boldName}>{name}</p>
+            <div className={css.userDetails}>
+                <p>{tag}</p>
+                <p>{location}</p>
+            </div>
         </div>
-        <ul>
+        <ul className={css.stat}>
             {list}
         </ul>
     </div>;
