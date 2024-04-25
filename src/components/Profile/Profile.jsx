@@ -18,8 +18,8 @@ const Profile = ({ name, tag, location, image, stats }) => {
     const list = [];
     for (let key in stats) {
         list.push(<li className={css.statElement} key={key}>
-            <span className={css.bold}>{firstLetterToUpperCase(key)}</span>
-                <span>{stats[key]}</span>
+            <span>{firstLetterToUpperCase(key)}</span>
+                <span className={css.bold}>{stats[key]}</span>
             </li>);
     }
 
@@ -33,7 +33,7 @@ const Profile = ({ name, tag, location, image, stats }) => {
             />
             <p className={css.boldName}>{name}</p>
             <div className={css.userDetails}>
-                <p>{tag}</p>
+                <p>{'@' + tag}</p>
                 <p>{location}</p>
             </div>
         </div>
